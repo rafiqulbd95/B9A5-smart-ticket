@@ -17,4 +17,8 @@
 p{
     font-family: "Inter", sans-serif;
 }
+#select-seat li{
+    display: flex;
+    justify-content: space-between;
+}
 
