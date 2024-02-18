@@ -38,29 +38,25 @@ for (const btn of seatBtn) {
     const convertPrice = parseInt(totalPrice);
     const totalSeatPrice = (document.getElementById("total-price").innerText =
       convertPrice + convertedPrice);
-     
+
     // grandTotalPrice
     const grandTotalPrice = document.getElementById("grand-total").innerText;
     const convertGrandPrice = parseInt(grandTotalPrice);
     document.getElementById("grand-total").innerText =
       convertGrandPrice + convertedPrice;
-      couponCode();
-  });
-};
 
-function couponCode(){
-    const applyBtn = document.getElementById("apply-btn");
-    applyBtn.addEventListener("click", function () {
-        const inputValue = document.getElementById("input_value").value;
-        // const inputValueCase= inputValue.toUpperCase();
-      
-        if (inputValue.toUpperCase() === "NEW15") {
-          const coupon = 0.15;
-          console.log(coupon);
-        } else {
-          console.log("object");
-        }
-      });
+    //   --------------
+    
+  });
 }
 
+const applyBtn = document.getElementById("apply-btn");
+applyBtn.addEventListener("click", function () {
+    const inputValue = document.getElementById("input_value").value;
 
+    if (inputValue.toUpperCase() === "NEW15") {
+      document.getElementById("coupon-area").classList.add("hidden");
+    } else if(inputValue.toUpperCase() === "COUPLE 20"){
+        document.getElementById("coupon-area").classList.add("hidden");
+    }
+});
